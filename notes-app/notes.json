@@ -1,14 +1,1 @@
-[
-  {
-    "title": "shopping list?",
-    "body": "1. Milk, 2. Orange Juice"
-  },
-  {
-    "title": "best directors",
-    "body": "1. Kurosawa, 2. Hertzog"
-  },
-  {
-    "title": "worst directors",
-    "body": "1. Tom Cruise"
-  }
-]
+[{"title":"shopping list?","body":"1. Milk, 2. Orange Juice"},{"title":"best directors","body":"1. Kurosawa, 2. Hertzog"}]
