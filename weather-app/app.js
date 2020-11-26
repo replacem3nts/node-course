@@ -1,7 +1,9 @@
-console.log('Starting');
+const postman = require('postman-request');
 
-setTimeout(() => {
-  console.log('This is async');
-}, 2000);
+const key = 'insert API key here...';
 
-console.log('Stopping');
+const url = `http://api.weatherstack.com/current?access_key=${key}&query=37.8267,-122.4233`;
+
+postman({ url: url }, (error, resp) => {
+  console.log(resp);
+});
