@@ -47,6 +47,22 @@ app.get('/weather', (req, res) => {
   });
 });
 
+app.get('/help/*', (req, res) => {
+  res.render('404', {
+    title: '404 Error',
+    errorMessage: 'Help article not found.',
+    name: 'Andrew Meads Udemy Node Course',
+  });
+});
+
+app.get('*', (req, res) => {
+  res.render('404', {
+    title: '404 Error',
+    errorMessage: 'Page note found',
+    name: 'Andrew Meads Udemy Node Course',
+  });
+});
+
 app.listen(3000, () => {
   console.log('Server started on port 3000...');
 });
