@@ -1,6 +1,6 @@
 const postman = require('postman-request');
 
-const MBkey = 'an API key';
+const MBkey = 'an API key...';
 
 const geocode = (address, callback) => {
   const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(

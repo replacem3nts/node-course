@@ -1,6 +1,6 @@
 const postman = require('postman-request');
 
-const WSkey = 'an API key';
+const WSkey = 'an API key...';
 
 const forecast = (latitude, longitude, callback) => {
   const url = `http://api.weatherstack.com/current?access_key=${WSkey}&query=${latitude},${longitude}&units=f`;
