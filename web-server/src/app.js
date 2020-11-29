@@ -1,21 +1,38 @@
+const path = require('path');
 const express = require('express');
 
 const app = express();
+const pubDirectoryPath = path.join(__dirname, '../public');
+
+app.set('view engine', 'hbs');
+app.use(express.static(pubDirectoryPath));
 
 app.get('', (req, res) => {
-  res.send('HELLO express...');
-});
-
-app.get('/help', (req, res) => {
-  res.send('Youre at the help page');
+  res.render('index', {
+    title: 'Weather App',
+    name: 'Node Course',
+  });
 });
 
 app.get('/about', (req, res) => {
-  res.send('Welcome to the About Page');
+  res.render('about', {
+    title: 'About',
+    name: 'Node Course',
+  });
+});
+
+app.get('/help', (req, res) => {
+  res.render('help', {
+    title: 'Help',
+    content: 'Help! I need somebody... Help! Not just anybody...',
+  });
 });
 
 app.get('/weather', (req, res) => {
-  res.send('Welcome to the Weather Page');
+  res.send({
+    forecast: 'Its gonna be cloudy!',
+    location: 'Yo mamas house',
+  });
 });
 
 app.listen(3000, () => {
