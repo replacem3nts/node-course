@@ -1,7 +1,6 @@
 const postman = require('postman-request');
 
-const MBkey = 'some key';
-
+const MBkey = 'key';
 const geocode = (address, callback) => {
   const url = `http://api.mapbox.com/geocoding/v5/mapbox.places/${encodeURIComponent(
     address
@@ -14,8 +13,8 @@ const geocode = (address, callback) => {
       callback('Unable to find location. Try another search.', undefined);
     } else {
       callback(undefined, {
-        longitude: body.features[0].center[0],
         latitude: body.features[0].center[1],
+        longitude: body.features[0].center[0],
         location: body.features[0].place_name,
       });
     }
