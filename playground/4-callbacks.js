@@ -26,13 +26,15 @@
 // 3. After 2 seconds are up, call the callback function with the sum
 // 4. Test your work!
 
-const add = (x, y, callback) => {
-  setTimeout(() => {
-    const num = x + y;
-    callback(num);
-  }, 2000);
-};
+// const add = (x, y, callback) => {
+//   setTimeout(() => {
+//     const num = x + y;
+//     callback(num);
+//   }, 2000);
+// };
 
-add(1, 4, sum => {
-  console.log(sum); // Should print: 5
-});
+// add(1, 4, sum => {
+//   console.log(sum); // Should print: 5
+// });
+
+const doWorkCallback = () => {};
